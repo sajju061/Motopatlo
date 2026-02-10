@@ -1,34 +1,43 @@
-// page navigation
-function goPage(n){
-  document.querySelectorAll('.page')
-    .forEach(p=>p.classList.remove('active'));
-  document.getElementById('page'+n).classList.add('active');
+function goPage(pageNumber){
+
+  let pages = document.querySelectorAll(".page");
+
+  pages.forEach(page => {
+    page.classList.remove("active");
+  });
+
+  document.getElementById("page" + pageNumber).classList.add("active");
 }
 
-// password check
+
+// PASSWORD CHECK
 function checkPassword(){
-  const pw = document.getElementById("password").value;
-  if(pw === "love"){
+
+  let pass = document.getElementById("password").value;
+
+  if(pass === "1234"){   // <-- password yahan change kar sakte ho
     goPage(2);
-  }else{
-    alert("Galat password 😢");
+  }
+  else{
+    alert("Wrong Password ❌");
   }
 }
 
-// music play (user click required)
-document.getElementById("playBtn").onclick = () => {
-  document.getElementById("bgm").play();
-  document.getElementById("playBtn").innerText="Music Playing";
-};
 
-// kiss & hug
-function kiss(){ show("💋"); }
-function hug(){ show("🤗"); }
-
-function show(e){
-  let d=document.createElement("div");
-  d.className="pop";
-  d.innerText=e;
-  document.body.appendChild(d);
-  setTimeout(()=>d.remove(),1500);
+// ACTION BUTTONS
+function kiss(){
+  alert("💋 Kiss Sent!");
 }
+
+function hug(){
+  alert("🤗 Hug Sent!");
+}
+
+
+// MUSIC
+let music = document.getElementById("bgm");
+let playBtn = document.getElementById("playBtn");
+
+playBtn.onclick = () => {
+  music.play();
+};
