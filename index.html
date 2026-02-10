@@ -1,47 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Wife ❤️</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Wife ❤️</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="paper">
-  <h2>🔐 Enter Password</h2>
-  <input type="password" id="pw" placeholder="Password likho">
-  <button onclick="check()">Next ❤️</button>
-</div>
-
-<script>
-function check(){
-  if(document.getElementById("pw").value === "love"){
-    window.location.href = "hearts.html";
-  } else {
-    alert("Galat password 😢");
-  }
-}
-</script>
-
-<button class="next" onclick="window.open('urdu.html','_blank')">
-  Next 💕
-</button>
-
-
+<!-- MUSIC -->
 <audio id="bgm" loop>
   <source src="love.mp3" type="audio/mpeg">
 </audio>
+<button id="playBtn">Play Song</button>
 
-<button id="playBtn" onclick="playMusic()">Play Music</button>
+<!-- PAGE 1 -->
+<section id="page1" class="page active">
+  <div class="paper">
+    <h2>🔐 Enter Password</h2>
+    <input type="password" id="password" placeholder="Password likho">
+    <button class="btn" onclick="checkPassword()">Next ❤️</button>
+  </div>
+</section>
 
-<script>
-function playMusic(){
-  const m=document.getElementById("bgm");
-  m.play();
-}
-</script>
+<!-- PAGE 2 -->
+<section id="page2" class="page">
+  <div class="center-text">💖 My Sweet Wife 💖</div>
 
+  <div class="actions">
+    <button class="btn" onclick="kiss()">💋 Kiss</button>
+    <button class="btn" onclick="hug()">🤗 Hug</button>
+  </div>
 
+  <button class="btn nav" onclick="goPage(1)">⬅ Back</button>
+  <button class="btn nav" onclick="goPage(3)">Next 💕</button>
+</section>
+
+<!-- PAGE 3 -->
+<section id="page3" class="page">
+  <div class="paper urdu">
+    <p>تم میری زندگی کی سب سے خوبصورت دعا ہو</p>
+    <p>تمہارے بغیر سب ادھورا لگتا ہے</p>
+    <p>میں ہر دن تم سے اور زیادہ محبت کرتا ہوں</p>
+    <p>تم ہمیشہ میرے دل میں رہو گی ❤️</p>
+  </div>
+
+  <button class="btn nav" onclick="goPage(2)">⬅ Back</button>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
