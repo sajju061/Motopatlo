@@ -86,15 +86,23 @@ button{
 
 
 
-.play-btn{
+#playBtn{
   position:fixed;
-  bottom:20px;
-  right:20px;
-  padding:12px 16px;
+  top:80px;
+  left:50%;
+  transform:translateX(-50%);
+  padding:12px 20px;
+
+  width:auto;
+  height:auto;
+
   font-size:16px;
   background:#ff4d6d;
-  color:white;
+  color:#fff;
+
   border:none;
-  border-radius:6px;   /* square look */
-  z-index:999;
+  border-radius:4px;   /* 🔥 square look */
+  
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+  z-index:9999;
 }
