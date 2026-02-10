@@ -1,0 +1,85 @@
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family: sans-serif;
+  background:#fdeff2;
+}
+
+/* Paper style box */
+.paper{
+  width:90%;
+  max-width:380px;
+  background:#fffaf0;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  text-align:center;
+  border:1px solid #eee;
+}
+
+/* Inputs & button */
+input, button{
+  width:100%;
+  padding:14px;
+  font-size:18px;
+  margin-top:10px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+button{
+  background:#ff4d6d;
+  color:white;
+  border:none;
+}
+
+/* Hearts background */
+.heart-bg{
+  background:
+   radial-gradient(circle at 20% 30%, #ff4d6d 10px, transparent 11px),
+   radial-gradient(circle at 70% 60%, #ff8fa3 10px, transparent 11px),
+   #ffe6ec;
+}
+
+/* Floating text */
+.center-text{
+  position:absolute;
+  font-size:26px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-15px);}
+  100%{transform:translateY(0);}
+}
+
+/* Next button */
+.next{
+  position:fixed;
+  bottom:20px;
+  width:90%;
+}
+
+/* Urdu animation */
+.urdu{
+  font-size:20px;
+  direction:rtl;
+}
+
+.line{
+  opacity:0;
+  animation: show 1s forwards;
+}
+
+.line:nth-child(1){animation-delay:0.5s}
+.line:nth-child(2){animation-delay:1.5s}
+.line:nth-child(3){animation-delay:2.5s}
+.line:nth-child(4){animation-delay:3.5s}
+
+@keyframes show{
+  to{opacity:1;}
+}
