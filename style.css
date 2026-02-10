@@ -85,15 +85,16 @@ button{
 }
 
 
-.music-btn{
+
+.play-btn{
   position:fixed;
-  top:15px;
-  right:15px;
-  padding:10px 12px;
-  font-size:18px;
-  border:none;
-  border-radius:50%;
+  bottom:20px;
+  right:20px;
+  padding:12px 16px;
+  font-size:16px;
   background:#ff4d6d;
   color:white;
+  border:none;
+  border-radius:6px;   /* square look */
   z-index:999;
 }

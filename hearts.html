@@ -17,30 +17,29 @@
 </button>
 
 
-<audio id="bgm" loop preload="auto">
+<audio id="bgm" loop>
   <source src="love.mp3" type="audio/mpeg">
 </audio>
 
-<button class="music-btn" onclick="startMusic()">🔊 Play Music</button>
+<button class="play-btn" onclick="playSong()"> Play Song</button>
+
 
 
 <script>
-const bgm = document.getElementById("bgm");
+function playSong(){
+  let music = document.getElementById("bgm");
+  music.play();
 
-function startMusic(){
-  bgm.play().then(()=>{
-    localStorage.setItem("music","on");
-  }).catch(()=>{
-    alert("Play button dabao ❤️");
-  });
+  // yaad rakhe ke song play ho chuka hai
+  localStorage.setItem("song", "on");
 }
 
-// Agar pehle kisi page par play ho chuka ho
-window.addEventListener("click", ()=>{
-  if(localStorage.getItem("music")==="on"){
-    bgm.play().catch(()=>{});
+// Agar pehle page par song play ho chuka tha
+window.onload = () => {
+  if(localStorage.getItem("song") === "on"){
+    document.getElementById("bgm").play().catch(()=>{});
   }
-});
+}
 </script>
 
 </body>
