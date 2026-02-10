@@ -95,4 +95,5 @@ button{
   border-radius:50%;
   background:#ff4d6d;
   color:white;
+  z-index:999;
 }

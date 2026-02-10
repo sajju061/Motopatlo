@@ -24,43 +24,33 @@ function check(){
 }
 </script>
 
-<audio id="bgm" loop>
+<audio id="bgm" loop preload="auto">
   <source src="love.mp3" type="audio/mpeg">
 </audio>
 
-<button class="music-btn" onclick="toggleMusic()">🔊</button>
+<button class="music-btn" onclick="startMusic()">🔊 Play Music</button>
+
+
+
 
 <script>
 const bgm = document.getElementById("bgm");
 
-// Agar already play ho chuka hai pehle tab me
-if(sessionStorage.getItem("musicPlaying") === "yes"){
-    bgm.play().catch(()=>{}); // auto play
+function startMusic(){
+  bgm.play().then(()=>{
+    localStorage.setItem("music","on");
+  }).catch(()=>{
+    alert("Play button dabao ❤️");
+  });
 }
 
-// Toggle button
-let play = false;
-function toggleMusic(){
-  if(play){
-    bgm.pause();
-    sessionStorage.setItem("musicPlaying","no");
-  } else {
+// Agar pehle kisi page par play ho chuka ho
+window.addEventListener("click", ()=>{
+  if(localStorage.getItem("music")==="on"){
     bgm.play().catch(()=>{});
-    sessionStorage.setItem("musicPlaying","yes");
   }
-  play = !play;
-}
-
-// Start playing on first tab load
-if(!play && sessionStorage.getItem("musicPlaying")!=="yes"){
-    bgm.play().catch(()=>{});
-    sessionStorage.setItem("musicPlaying","yes");
-    play=true;
-}
+});
 </script>
-
-
-
 
 </body>
 </html>
