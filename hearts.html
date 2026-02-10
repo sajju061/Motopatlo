@@ -16,5 +16,44 @@
   Next 💕
 </button>
 
+
+<audio id="bgm" loop>
+  <source src="love.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">🔊</button>
+
+
+
+<script>
+
+const bgm = document.getElementById("bgm");
+
+// Agar already play ho chuka hai pehle tab me
+if(sessionStorage.getItem("musicPlaying") === "yes"){
+    bgm.play().catch(()=>{}); // auto play
+}
+
+// Toggle button
+let play = false;
+function toggleMusic(){
+  if(play){
+    bgm.pause();
+    sessionStorage.setItem("musicPlaying","no");
+  } else {
+    bgm.play().catch(()=>{});
+    sessionStorage.setItem("musicPlaying","yes");
+  }
+  play = !play;
+}
+
+// Start playing on first tab load
+if(!play && sessionStorage.getItem("musicPlaying")!=="yes"){
+    bgm.play().catch(()=>{});
+    sessionStorage.setItem("musicPlaying","yes");
+    play=true;
+}
+</script>
+
 </body>
 </html>

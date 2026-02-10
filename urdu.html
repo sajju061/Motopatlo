@@ -6,7 +6,9 @@
 <title>❤️</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
 
 <div class="paper urdu">
   <p class="line">تم میری زندگی کی سب سے خوبصورت دعا ہو</p>
@@ -14,20 +16,43 @@
   <p class="line">میں ہر دن تم سے اور زیادہ محبت کرتا ہوں</p>
   <p class="line">تم ہمیشہ میرے دل میں رہو گی ❤️</p>
 </div>
+
 <audio id="bgm" loop>
   <source src="love.mp3" type="audio/mpeg">
 </audio>
 
 <button class="music-btn" onclick="toggleMusic()">🔊</button>
 
+
 <script>
-let play=false;
+const bgm = document.getElementById("bgm");
+
+// Agar already play ho chuka hai pehle tab me
+if(sessionStorage.getItem("musicPlaying") === "yes"){
+    bgm.play().catch(()=>{}); // auto play
+}
+
+// Toggle button
+let play = false;
 function toggleMusic(){
-  let m=document.getElementById("bgm");
-  play ? m.pause() : m.play();
-  play=!play;
+  if(play){
+    bgm.pause();
+    sessionStorage.setItem("musicPlaying","no");
+  } else {
+    bgm.play().catch(()=>{});
+    sessionStorage.setItem("musicPlaying","yes");
+  }
+  play = !play;
+}
+
+// Start playing on first tab load
+if(!play && sessionStorage.getItem("musicPlaying")!=="yes"){
+    bgm.play().catch(()=>{});
+    sessionStorage.setItem("musicPlaying","yes");
+    play=true;
 }
 </script>
+
 
 
 </body>
