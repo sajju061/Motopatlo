@@ -17,7 +17,7 @@
 <script>
 function check(){
   if(document.getElementById("pw").value === "love"){
-    window.open("hearts.html", "_blank");
+    window.location.href = "hearts.html";
   } else {
     alert("Galat password 😢");
   }
@@ -33,24 +33,15 @@ function check(){
   <source src="love.mp3" type="audio/mpeg">
 </audio>
 
-<button class="play-btn" onclick="playSong()">🔊 Play Song</button>
+<button id="playBtn" onclick="playMusic()">Play Music</button>
 
 <script>
-function playSong(){
-  let music = document.getElementById("bgm");
-  music.play();
-
-  // yaad rakhe ke song play ho chuka hai
-  localStorage.setItem("song", "on");
-}
-
-// Agar pehle page par song play ho chuka tha
-window.onload = () => {
-  if(localStorage.getItem("song") === "on"){
-    document.getElementById("bgm").play().catch(()=>{});
-  }
+function playMusic(){
+  const m=document.getElementById("bgm");
+  m.play();
 }
 </script>
+
 
 </body>
 </html>
