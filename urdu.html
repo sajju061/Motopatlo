@@ -14,6 +14,21 @@
   <p class="line">میں ہر دن تم سے اور زیادہ محبت کرتا ہوں</p>
   <p class="line">تم ہمیشہ میرے دل میں رہو گی ❤️</p>
 </div>
+<audio id="bgm" loop>
+  <source src="love.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">🔊</button>
+
+<script>
+let play=false;
+function toggleMusic(){
+  let m=document.getElementById("bgm");
+  play ? m.pause() : m.play();
+  play=!play;
+}
+</script>
+
 
 </body>
 </html>
