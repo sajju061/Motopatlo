@@ -41,3 +41,42 @@ let playBtn = document.getElementById("playBtn");
 playBtn.onclick = () => {
   music.play();
 };
+
+
+// Paragraph animation
+function openMail(){
+
+  let letter = document.getElementById("letter");
+  letter.style.display = "block";
+
+  let lines = document.querySelectorAll(".line");
+
+  lines.forEach((line,index)=>{
+
+    setTimeout(()=>{
+      line.style.transition = "1s";
+      line.style.opacity = "1";
+      line.style.transform = "translateY(0)";
+    }, index * 1000);
+
+  });
+
+}
+
+
+//FALLING HEARTS
+function createHeart(){
+
+  let heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "❤️";
+
+  heart.style.left = Math.random()*100 + "vw";
+
+  document.body.appendChild(heart);
+
+  setTimeout(()=> heart.remove(),5000);
+}
+
+setInterval(createHeart,600);
+

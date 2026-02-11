@@ -16,37 +16,60 @@
 
 <!-- PAGE 1 -->
 <section id="page1" class="page active">
-  <div class="paper">
-    <h2>🔐 Enter Password</h2>
-    <input type="password" id="password" placeholder="Password likho">
-    <button class="btn" onclick="checkPassword()">Next ❤️</button>
-  </div>
+
+<div class="lock-container">
+
+<div class="heart-lock">
+❤️
+<span class="lock-text">123</span>
+</div>
+
+<input type="password" id="password" placeholder="Password likho">
+
+<button class="btn" onclick="checkPassword()">Unlock ❤️</button>
+
+</div>
+
 </section>
+
 
 <!-- PAGE 2 -->
 <section id="page2" class="page">
-  <div class="center-text">💖 My Sweet Wife 💖</div>
 
-  <div class="actions">
-    <button class="btn" onclick="kiss()">💋 Kiss</button>
-    <button class="btn" onclick="hug()">🤗 Hug</button>
-  </div>
+<div class="cartoon-top">
+<img src="cartoon. gif" alt="love cartoon">
+</div>
 
-  <button class="btn nav" onclick="goPage(1)">⬅ Back</button>
-  <button class="btn nav" onclick="goPage(3)">Next 💕</button>
+<div class="center-text">
+💖 MAH KHOG BACHA 💖
+</div>
+
+<button class="btn nav" onclick="goPage(3)">Next 💕</button>
+
 </section>
+
+
 
 <!-- PAGE 3 -->
 <section id="page3" class="page">
-  <div class="paper urdu">
-    <p>تم میری زندگی کی سب سے خوبصورت دعا ہو</p>
-    <p>تمہارے بغیر سب ادھورا لگتا ہے</p>
-    <p>میں ہر دن تم سے اور زیادہ محبت کرتا ہوں</p>
-    <p>تم ہمیشہ میرے دل میں رہو گی ❤️</p>
-  </div>
 
-  <button class="btn nav" onclick="goPage(2)">⬅ Back</button>
+<div class="mail" onclick="openMail()">
+📩
+</div>
+
+<div id="letter" class="letter">
+<p class="line">تم میری زندگی کی سب سے خوبصورت دعا ہو</p>
+<p class="line">تمہارے بغیر سب ادھورا لگتا ہے</p>
+<p class="line">میں ہر دن تم سے زیادہ محبت کرتا ہوں</p>
+<p class="line">تم ہمیشہ میرے دل میں رہو گی ❤️</p>
+</div>
+
+<button class="btn nav" onclick="goPage(2)">⬅ Back</button>
+
 </section>
+
+
+
 
 <script src="script.js"></script>
 </body>
