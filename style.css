@@ -22,14 +22,38 @@ body{
 
 /* paper box */
 .paper{
-  max-width:380px;
-  margin:80px auto;
-  padding:20px;
-  background:#fffaf0;
-  border-radius:12px;
-  box-shadow:0 8px 20px rgba(0,0,0,.15);
-  text-align:center;
+  display: none;
+  background: #fffdf5;
+  padding: 25px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+
+  /* Paper Look */
+  background-image: linear-gradient(#f9f3dc 1px, transparent 1px);
+  background-size: 100% 30px;
+
+  font-size: 18px;
+  line-height: 30px;
+  font-family: cursive;
+
+  animation: openPaper 1s ease;
 }
+
+/* Opening Animation */
+@keyframes openPaper{
+  from{
+    transform: scaleY(0);
+    opacity:0;
+  }
+  to{
+    transform: scaleY(1);
+    opacity:1;
+  }
+}
+
+
+
 
 /* urdu */
 .urdu{
