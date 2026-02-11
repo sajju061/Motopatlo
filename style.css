@@ -142,8 +142,7 @@ input{
 }
 
 .cartoon-top img{
-  width:180px;
-  animation: float 2s ease-in-out infinite;
+  width:200px;
 }
 
 @keyframes float{
