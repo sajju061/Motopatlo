@@ -43,26 +43,6 @@ playBtn.onclick = () => {
 };
 
 
-// Paragraph animation
-function openMail(){
-
-  let letter = document.getElementById("letter");
-  letter.style.display = "block";
-
-  let lines = document.querySelectorAll(".line");
-
-  lines.forEach((line,index)=>{
-
-    setTimeout(()=>{
-      line.style.transition = "1s";
-      line.style.opacity = "1";
-      line.style.transform = "translateY(0)";
-    }, index * 1000);
-
-  });
-
-}
-
 
 //FALLING HEARTS
 function createHeart(){
