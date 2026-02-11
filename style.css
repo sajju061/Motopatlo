@@ -217,8 +217,6 @@ input{
 /* center */
 .nav{
   position:relative;
-  margin-botton 15px;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  margin-bottom:15px;
 }
 
