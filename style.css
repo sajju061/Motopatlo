@@ -69,16 +69,6 @@ input{
   font-size:18px;
 }
 
-.btn{
-  width:100%;
-  padding:14px;
-  margin-top:10px;
-  background:#ff4d6d;
-  color:#fff;
-  border:none;
-  border-radius:8px;
-  font-size:18px;
-}
 
 /* play music button */
 #playBtn{
@@ -176,11 +166,11 @@ input{
 }
 
 /* Mail des */
-.mail{
+/* .mail{
   font-size:80px;
   text-align:center;
   cursor:pointer;
-  animation: shake 1s infinite;
+  animation: shake 1s infinite;*/
 }
 
 @keyframes shake{
@@ -213,12 +203,32 @@ input{
     transform:translateY(100vh);
     opacity:0;
   }
-}
-/* center */
-.nav{
-  position:relative;
+
+
+/* ===== ALL BUTTONS ===== */
+.btn{
+  width:100%;
+  padding:14px;
+  margin-top:10px;
+  background:#ff4d6d;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-size:18px;
 }
 
-/*btn bottom */
-.next-btn {
-margin-bottom:60px;
+/* ===== BOTTOM BUTTONS (Next & Back) ===== */
+.nav-buttons{
+  position:fixed;
+  bottom:80px;
+  left:0;
+  width:100%;
+  padding:0 20px;
+  display:flex;
+  gap:10px;
+  z-index:500;
+}
+
+.nav-buttons .btn{
+  flex:1;
+}
