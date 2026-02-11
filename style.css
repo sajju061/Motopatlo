@@ -217,6 +217,8 @@ input{
 /* center */
 .nav{
   position:relative;
-  margin-bottom:15px;
 }
 
+/*btn bottom */
+.next-btn {
+margin-bottom:60px;
