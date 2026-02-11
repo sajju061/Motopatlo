@@ -80,3 +80,10 @@ function createHeart(){
 
 setInterval(createHeart,600);
 
+
+function openLetter(){
+
+  document.getElementById("mailBox").style.display = "none";
+
+  document.getElementById("letter").style.display = "block";
+}
