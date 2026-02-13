@@ -227,13 +227,14 @@ input{
 /* ===== BOTTOM BUTTONS (Next & Back) ===== */
 .nav-buttons{
   position:relative;
-  bottom:80px;
-  left:0;
+  bottom:15px;
+  left:50;
   width:auto%;
   padding:0 20px;
   display:flex;
   gap:10px;
   z-index:500;
+  transform:translateX(-50%);
 }
 
 .nav-buttons .btn{
