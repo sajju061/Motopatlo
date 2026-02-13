@@ -226,12 +226,13 @@ input{
 
 /* ===== BOTTOM BUTTONS (Next & Back) ===== */
 .btn-group{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:15px;
-  margin-top:30px;
+position:fixed;
+  bottom:100px;   /* Play se thora upar */
+  left:50%;
+  transform:translateX(-50%);
+  width:220px;
 }
+
 
 
 
