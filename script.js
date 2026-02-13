@@ -35,6 +35,9 @@ function goPage(pageNumber){
       line.classList.remove("show");
     });
   }
+  if(pageNumber === 3){
+   startUrduTyping();
+}
 
   // ===== PAGE 4 TYPEWRITER =====
   if(pageNumber === 4){
@@ -107,3 +110,41 @@ function startTyping(){
 
   typing();
 }
+
+
+//URDU TYPEWRITER
+
+let urduParagraph = `
+تم میرے لیے بہت خاص ہو۔
+تم وہ واحد شخص ہو جس کے لیے
+مجھے نیند سے محروم رہنے میں کوئی اعتراض نہیں۔
+صرف تم ہو جس سے بات کرتے ہوئے
+میں کبھی تھک نہیں سکتا۔
+تمہارا خیال ہی میرے لبوں پر
+مسکراہٹ بکھیر دیتا ہے۔
+تم وہ واحد شخص ہو جسے
+مجھے کھو دینے کا ڈر ہے۔
+تم وہ شخص ہو جس کے ساتھ
+مجھے آخری آرامگاہ تک سفر
+کرنے کی خواہش ہے۔
+`;
+
+function startUrduTyping(){
+
+  let el = document.getElementById("urduText");
+  if(!el) return;
+
+  el.innerHTML = "";
+  let i = 0;
+
+  function typing(){
+    if(i < urduParagraph.length){
+      el.innerHTML += urduParagraph.charAt(i);
+      i++;
+      setTimeout(typing,40);
+    }
+  }
+
+  typing();
+}
+
