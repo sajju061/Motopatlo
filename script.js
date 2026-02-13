@@ -69,26 +69,35 @@ playBtn.onclick = () => {
 
 
 
-//FALLING HEARTS
-function createHeart(){
+// HEARTS FLOATING
 
-  let heart = document.createElement("div");
-  heart.classList.add("heart");
-  heart.innerHTML = "❤️";
-
+setInterval(()=>{
+  let heart = document.createElement("span");
+  heart.innerHTML = "❤";
   heart.style.left = Math.random()*100 + "vw";
+  heart.style.fontSize = (15 + Math.random()*20) + "px";
 
-  document.body.appendChild(heart);
+  document.querySelector(".hearts").appendChild(heart);
 
-  setTimeout(()=> heart.remove(),5000);
+  setTimeout(()=>{
+    heart.remove();
+  },8000);
+
+},800);
+
+
+//TYPEWRITER
+
+let text = "You Are My Forever Person ❤️";
+let i = 0;
+
+function typeWriter(){
+  if(i < text.length){
+    document.getElementById("typeText").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter,80);
+  }
 }
 
-setInterval(createHeart,600);
+typeWriter();
 
-
-function openLetter(){
-
-  document.getElementById("mailBox").style.display = "none";
-
-  document.getElementById("letter").style.display = "block";
-}
