@@ -88,7 +88,7 @@ setInterval(()=>{
 
 //TYPEWRITER
 
-let text = "You Are My Forever Person ❤️";
+let text = "MAH MOTO  ❤";
 let i = 0;
 
 function typeWriter(){
