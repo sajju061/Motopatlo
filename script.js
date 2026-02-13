@@ -32,6 +32,10 @@ if(pageNumber !== 3){
   });
 }
 
+if(pageNumber === 4){
+      startTyping();
+  }
+
 
 
 
@@ -70,34 +74,48 @@ playBtn.onclick = () => {
 
 
 // HEARTS FLOATING
+document.addEventListener("DOMContentLoaded", function(){
 
-setInterval(()=>{
-  let heart = document.createElement("span");
-  heart.innerHTML = "❤";
-  heart.style.left = Math.random()*100 + "vw";
-  heart.style.fontSize = (15 + Math.random()*20) + "px";
+  setInterval(function(){
 
-  document.querySelector(".hearts").appendChild(heart);
+    let heart = document.createElement("span");
+    heart.innerHTML = "❤";
 
-  setTimeout(()=>{
-    heart.remove();
-  },8000);
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.fontSize = (15 + Math.random()*25) + "px";
 
-},800);
+    document.querySelector(".hearts").appendChild(heart);
+
+    setTimeout(()=>{
+      heart.remove();
+    },6000);
+
+  },700);
+
+});
 
 
 //TYPEWRITER
 
-let text = "MAH MOTO  ❤";
+let text = "You Are My Forever Person ❤️";
 let i = 0;
 
-function typeWriter(){
-  if(i < text.length){
-    document.getElementById("typeText").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeWriter,80);
-  }
-}
+function startTyping(){
 
-typeWriter();
+  let el = document.getElementById("typeText");
+  if(!el) return;
+
+  el.innerHTML = "";
+  i = 0;
+
+  function typing(){
+    if(i < text.length){
+      el.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typing,80);
+    }
+  }
+
+  typing();
+}
 
