@@ -1,13 +1,13 @@
 body{
   margin:0;
-  overflow-x:hidden;
 }
 
 /* pages */
 .page{
   display:none;
   min-height:100vh;
-  padding:20px;
+  padding-bottom:150px;
+  animation: fade 0.5s ease;
 }
 
 .page.active{
@@ -18,7 +18,7 @@ body{
 .paper{
   display: block;
   background: #fffdf5;
-  padding: 25px;
+  padding:30px 20px;
   margin: 20px;
   border-radius: 8px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
@@ -106,10 +106,6 @@ input{
   100%{opacity:0;}
 }
 
-.page{
-  display:none;
-  animation: fade 0.5s ease;
-}
 
 @keyframes fade{
   from{opacity:0;}
@@ -211,23 +207,29 @@ input{
 
 /* ===== ALL BUTTONS ===== */
 .btn{
-  width:220px;
-  padding:14px;
-  background:#ff4d6d;
-  color:#fff;
+  display:block;
+  width:80%;
+  max-width:260px;
+  margin:15px auto;
+  padding:15px;
   border:none;
-  border-radius:10px;
+  border-radius:30px;
   font-size:18px;
+  font-weight:600;
+  color:white;
+  background:linear-gradient(45deg,#ff4d6d,#ff758f);
+  box-shadow:0 8px 20px rgba(255,77,109,0.4);
+  transition:0.3s ease;
 }
 
-
-/* ===== BOTTOM BUTTONS (Next & Back) ===== */
 .btn-group{
-position:fixed;
-  bottom:100px;   /* Play se thora upar */
-  left:50%;
-  transform:translateX(-50%);
-  width:220px;
+  text-align:center;
+  margin-top:30px;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 10px 25px rgba(255,77,109,0.6);
 }
 
 
