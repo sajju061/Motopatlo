@@ -10,36 +10,12 @@ function goPage(pageNumber){
 
   window.scrollTo(0,0);
 
-  // ===== PAGE 3 PARAGRAPH ANIMATION =====
+  // PAGE 3 URDU TYPEWRITER
   if(pageNumber === 3){
-
-    let letter = document.getElementById("letter");
-    letter.style.display = "block";
-
-    let lines = document.querySelectorAll(".line");
-
-    lines.forEach(line=>{
-      line.classList.remove("show"); // reset
-    });
-
-    lines.forEach((line,index)=>{
-      setTimeout(()=>{
-        line.classList.add("show");
-      }, index * 700);
-    });
+    startUrduTyping();
   }
 
-  // reset animation when leaving page 3
-  if(pageNumber !== 3){
-    document.querySelectorAll(".line").forEach(line=>{
-      line.classList.remove("show");
-    });
-  }
-  if(pageNumber === 3){
-   startUrduTyping();
-}
-
-  // ===== PAGE 4 TYPEWRITER =====
+  // PAGE 4 TYPEWRITER
   if(pageNumber === 4){
     startTyping();
   }
