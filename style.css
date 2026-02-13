@@ -22,7 +22,7 @@ body{
 
 /* paper box */
 .paper{
-  display: none;
+  display: block;
   background: #fffdf5;
   padding: 25px;
   margin: 20px;
@@ -201,7 +201,7 @@ input{
 @keyframes fall{
   to{
     transform:translateY(100vh);
-    opacity:0;
+    opacity:0;}
   }
 
 

@@ -7,7 +7,14 @@ function goPage(pageNumber){
   });
 
   document.getElementById("page" + pageNumber).classList.add("active");
+
+  // 👇 page3 open hone par letter show
+  if(pageNumber === 3){
+    document.getElementById("letter").style.display = "block";
+  }
 }
+
+
 
 
 // PASSWORD CHECK
