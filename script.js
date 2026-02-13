@@ -2,12 +2,13 @@ function goPage(pageNumber){
 
   let pages = document.querySelectorAll(".page");
 
-  pages.forEach(page => {
+  pages.forEach(page=>{
     page.classList.remove("active");
   });
 
-  document.getElementById("page" + pageNumber).classList.add("active");
+  document.getElementById("page"+pageNumber).classList.add("active");
 
+  window.scrollTo(0,0);
 
   // ===== PAGE 3 PARAGRAPH ANIMATION =====
   if(pageNumber === 3){
@@ -17,49 +18,39 @@ function goPage(pageNumber){
 
     let lines = document.querySelectorAll(".line");
 
+    lines.forEach(line=>{
+      line.classList.remove("show"); // reset
+    });
+
     lines.forEach((line,index)=>{
       setTimeout(()=>{
         line.classList.add("show");
-      }, index * 800);
+      }, index * 700);
     });
-
-  }
-}
-
-if(pageNumber !== 3){
-  document.querySelectorAll(".line").forEach(line=>{
-    line.classList.remove("show");
-  });
-}
-
-if(pageNumber === 4){
-      startTyping();
   }
 
+  // reset animation when leaving page 3
+  if(pageNumber !== 3){
+    document.querySelectorAll(".line").forEach(line=>{
+      line.classList.remove("show");
+    });
+  }
 
+  // ===== PAGE 4 TYPEWRITER =====
+  if(pageNumber === 4){
+    startTyping();
+  }
+}
 
 
 // PASSWORD CHECK
 function checkPassword(){
-
   let pass = document.getElementById("password").value;
-
-  if(pass === "1234"){   // <-- password yahan change kar sakte ho
+  if(pass === "1234"){
     goPage(2);
-  }
-  else{
+  } else {
     alert("Wrong Password ❌");
   }
-}
-
-
-// ACTION BUTTONS
-function kiss(){
-  alert("💋 Kiss Sent!");
-}
-
-function hug(){
-  alert("🤗 Hug Sent!");
 }
 
 
@@ -67,10 +58,9 @@ function hug(){
 let music = document.getElementById("bgm");
 let playBtn = document.getElementById("playBtn");
 
-playBtn.onclick = () => {
+playBtn.onclick = ()=>{
   music.play();
 };
-
 
 
 // HEARTS FLOATING
@@ -95,8 +85,7 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 
-//TYPEWRITER
-
+// TYPEWRITER
 let text = "You Are My Forever Person ❤️";
 let i = 0;
 
@@ -118,4 +107,3 @@ function startTyping(){
 
   typing();
 }
-
