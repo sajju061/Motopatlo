@@ -8,10 +8,28 @@ function goPage(pageNumber){
 
   document.getElementById("page" + pageNumber).classList.add("active");
 
-  // 👇 page3 open hone par letter show
+
+  // ===== PAGE 3 PARAGRAPH ANIMATION =====
   if(pageNumber === 3){
-    document.getElementById("letter").style.display = "block";
+
+    let letter = document.getElementById("letter");
+    letter.style.display = "block";
+
+    let lines = document.querySelectorAll(".line");
+
+    lines.forEach((line,index)=>{
+      setTimeout(()=>{
+        line.classList.add("show");
+      }, index * 800);
+    });
+
   }
+}
+
+if(pageNumber !== 3){
+  document.querySelectorAll(".line").forEach(line=>{
+    line.classList.remove("show");
+  });
 }
 
 
