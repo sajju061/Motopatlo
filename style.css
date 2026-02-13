@@ -214,8 +214,8 @@ input{
 
 /* ===== ALL BUTTONS ===== */
 .btn{
-  width:100%;
-  padding:14px;
+  width:auto;
+  padding:14px 25px;
   margin-top:10px;
   background:#ff4d6d;
   color:#fff;
@@ -226,10 +226,10 @@ input{
 
 /* ===== BOTTOM BUTTONS (Next & Back) ===== */
 .nav-buttons{
-  position:fixed;
+  position:relative;
   bottom:80px;
   left:0;
-  width:100%;
+  width:auto%;
   padding:0 20px;
   display:flex;
   gap:10px;
@@ -238,4 +238,8 @@ input{
 
 .nav-buttons .btn{
   flex:1;
+}
+
+p{
+  font-family: "Noto Nastaliq Urdu", serif;
 }
