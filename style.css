@@ -305,3 +305,53 @@ p{
   line-height:2.2;
   white-space:pre-line;
 }
+
+
+/*STYLE LOVE LETTER */
+
+.love-letter{
+  max-width:500px;
+  margin:40px auto;
+  padding:35px 25px;
+  background:#fffdf5;
+
+  border-radius:15px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.2);
+
+  /* soft romantic border */
+  border:2px solid #ffccd5;
+
+  /* paper line effect */
+  background-image: linear-gradient(#f9f3dc 1px, transparent 1px);
+  background-size: 100% 32px;
+
+  position:relative;
+  animation:fadeInLetter 1s ease;
+}
+
+/* top ribbon effect */
+.love-letter::before{
+  content:"💌 Love Letter";
+  position:absolute;
+  top:-18px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#ff4d6d;
+  color:white;
+  padding:5px 15px;
+  border-radius:20px;
+  font-size:14px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+@keyframes fadeInLetter{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
