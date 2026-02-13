@@ -238,3 +238,19 @@ input{
 p{
   font-family: "Noto Nastaliq Urdu", serif;
 }
+
+
+/*page 4 style */
+
+
+.gif{
+  width:200px;
+  display:block;
+  margin:20px auto;
+}
+
+.moto{
+  text-align:center;
+  font-size:26px;
+  margin-top:20px;
+}
