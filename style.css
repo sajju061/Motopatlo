@@ -1,5 +1,8 @@
 body{
   margin:0;
+  background: #ffeaf4;
+  text-align: center;
+  font-family: serif;
 }
 
 /* pages */
@@ -333,45 +336,54 @@ p{
 
 /*lock pswrd */
 
-.lock-screen{
-  text-align:center;
-  padding-top:60px;
-  background:linear-gradient(#ffe6eb,#fff);
-  min-height:100vh;
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  gap: 25px;
+  justify-content: center;
+  margin-top: 40px;
 }
 
-.lock-title{
-  font-size:18px;
-  margin-bottom:20px;
+.heart {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: #ffb6c1;
+  border: none;
+  cursor: pointer;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.password-display{
-  font-size:28px;
-  letter-spacing:10px;
-  margin-bottom:30px;
-  min-height:40px;
+.heart span {
+  transform: rotate(45deg);
+  font-size: 24px;
+  font-weight: bold;
+  color: #d63384;
+  pointer-events: none;
 }
 
-.heart-keypad{
-  display:grid;
-  grid-template-columns:repeat(3,80px);
-  gap:15px;
-  justify-content:center;
+/* Heart circles */
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: #ffb6c1;
+  border-radius: 50%;
+  z-index: -1;
 }
 
-.heart-keypad button{
-  width:80px;
-  height:80px;
-  background:#ff4d6d;
-  color:white;
-  font-size:20px;
-  border:none;
-  cursor:pointer;
-
-  clip-path: path("M40 70 C20 50 0 35 20 20 C35 10 40 25 40 25 C40 25 45 10 60 20 C80 35 60 50 40 70");
+.heart::before {
+  top: -40px;
+  left: 0;
 }
 
-.heart-keypad button:active{
-  transform:scale(0.9);
+.heart::after {
+  left: 40px;
+  top: 0;
 }
-
