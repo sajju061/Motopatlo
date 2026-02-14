@@ -42,20 +42,20 @@ function goPage(pageNumber){
 
 
 // PASSWORD CHECK
-
+let isHidden = true;
 let password = "";
 let correctPassword = "1234"; // yahan apni Nikah date likho
 
 function addNumber(num) {
   if (password.length < 6) {
     password += num;
-    document.getElementById("display").innerText = "●".repeat(password.length);
+    updateDisplay();
   }
 }
 
 function clearInput() {
   password = "";
-  document.getElementById("display").innerText = "";
+  updateDisplay();
 }
 
 function checkPassword() {
@@ -67,6 +67,20 @@ function checkPassword() {
   }
 }
 
+function updateDisplay() {
+  let display = document.getElementById("display");
+
+  if (isHidden) {
+    display.innerText = "●".repeat(password.length);
+  } else {
+    display.innerText = password;
+  }
+}
+
+function togglePassword() {
+  isHidden = !isHidden;
+  updateDisplay();
+}
 
 
 

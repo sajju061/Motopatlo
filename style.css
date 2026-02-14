@@ -421,9 +421,10 @@ p{
 /* cursor */
 
 .cursor{
-  margin-left:5px;
+  margin-left:4px;
   animation:blink 1s infinite;
   font-weight:bold;
+  color: #c2185b;
 }
 
 @keyframes blink{
@@ -432,6 +433,16 @@ p{
   100%{opacity:1;}
 }
 
+/* Show/Hide button */
+.toggle-btn {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #c2185b;
+}
 
 
 
