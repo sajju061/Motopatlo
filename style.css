@@ -131,11 +131,11 @@ input{
   width:200px;
 }
 
-@keyframes float{
+/*@keyframes float{
   0%{ transform:translateY(0);}
   50%{ transform:translateY(-20px);}
   100%{ transform:translateY(0);}
-}
+}*/
 
 /* Mail des */
 /* .mail{
@@ -145,12 +145,12 @@ input{
   animation: shake 1s infinite;
 }*/
 
-
+/*
 @keyframes shake{
   0%{ transform:rotate(0);}
   50%{ transform:rotate(10deg);}
   100%{ transform:rotate(0);}
-}
+}*/
 
 /* letter slider */
 /*.letter{
@@ -183,12 +183,12 @@ input{
   top:-10px;
   animation:fall 5s linear;
 }
-
+/*
 @keyframes fall{
   to{
     transform:translateY(100vh);
     opacity:0;}
-  }
+  }*/
 
 
 /* ===== ALL BUTTONS ===== */
@@ -263,7 +263,7 @@ p{
   font-size:20px;
   animation:floatUp 6s linear forwards;
 }
-
+/*
 @keyframes floatUp{
   from{
     transform:translateY(0);
@@ -273,7 +273,7 @@ p{
     transform:translateY(-110vh);
     opacity:0;
   }
-}
+}*/
 
 
 .urdu-type{
@@ -376,8 +376,8 @@ p{
 
 .heart {
   position: relative;
-  width: 40px;   /* smaller */
-  height: 40px;
+  width: 30px;   /* smaller */
+  height: 30px;
   background: #e91e63; /* dark pink */
   border: none;
   cursor: pointer;
@@ -399,8 +399,8 @@ p{
 .heart::after {
   content: "";
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background: #e91e63; /* same dark pink */
   border-radius: 50%;
   z-index: -1;
