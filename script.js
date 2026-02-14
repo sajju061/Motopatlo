@@ -60,7 +60,7 @@ function clearInput() {
 
 function checkPassword() {
   if (password === correctPassword) {
-    window.location.href = "page2.html";
+    goPage(2);
   } else {
     alert("Wrong Password 💔");
     clearInput();
