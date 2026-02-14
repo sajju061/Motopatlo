@@ -37,7 +37,12 @@ function goPage(pageNumber){
 
 }
 
-    
+    if(pageNumber === 6){
+  k = 0;
+  document.getElementById("typeText3").innerHTML = "";
+  typeWriter3();
+}
+ 
 
 
 
@@ -244,3 +249,19 @@ function startUrduTyping2(){
 
   typing();
 }
+
+
+
+//page 6 typewriter
+
+const romanticMessage3 = "Forever isn't long enough with you ❤️";
+let k = 0;
+
+function typeWriter3() {
+  if (k < romanticMessage3.length) {
+    document.getElementById("typeText3").innerHTML += romanticMessage3.charAt(k);
+    k++;
+    setTimeout(typeWriter3, 50);
+  }
+}
+
