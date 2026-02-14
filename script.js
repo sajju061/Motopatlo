@@ -19,6 +19,9 @@ function goPage(pageNumber){
     if(pageNumber === 3){
       startUrduTyping();
     }
+     if(pageNumber === 2){
+      startTyping();
+    }
 
     if(pageNumber === 4){
       startTyping();
