@@ -20,6 +20,18 @@ function goPage(pageNumber){
     startTyping();
   }
 }
+  // PAGE 4 TYPEWRITER
+  if(pageNumber === 5){
+  startUrduTyping2();
+}
+
+
+
+
+
+
+
+
 
 
 // PASSWORD CHECK
@@ -63,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 });
 
-
+// ===== PAGE 3 URDU TYPEWRITER ====
 // TYPEWRITER
 let text = "You Are My Forever Person ❤️";
 let i = 0;
@@ -87,7 +99,7 @@ function startTyping(){
   typing();
 }
 
-
+// ===== PAGE 4 URDU TYPEWRITER ====
 //URDU TYPEWRITER
 
 let urduParagraph = `
@@ -124,3 +136,43 @@ function startUrduTyping(){
   typing();
 }
 
+
+
+// ===== PAGE 5 URDU TYPEWRITER =====
+let urduParagraph2 = `
+تمہیں مسکراتا دیکھ کر سوچتا ہوں کہ محبت کتنی پیاری ہوتی ہے۔
+کیسے ساری دعائیں ایک ہی شخص کے نام سے منسوب ہو جاتی ہیں!
+تمہاری بے رخی سے لیکر محبت کرنے تک میں نے تمہاری ہر ادا سے محبت کی ہے۔
+میری دُعا کا آغاز بھی تم سے ہوتا ہے اور اختتام بھی تم پہ ہوتا ہے۔
+اللہ اللہ تمہیں دنیا جہان کی ہر خوشی نوازے،
+تمہاری شرارتی آنکھیں یونہی سدا مسکراتی رہیں!
+تمہیں ان منزلوں تک خدا لیکر جائے جن کے تم خواب دیکھتے ہو۔
+تمہاری زندگی میں کبھی اُس چیز کی کمی نہ ہو
+جو تمہارے دل کو بے چین کر دے!
+میں نے ہمیشہ تمہارے حوالے سے اپنا دل پاکیزہ رکھا ہے،
+اس لیے تم کبھی یہ مت سوچنا کہ میرا دل تم سے میلا ہوگا۔
+تمہاری جو جگہ آج ہے ہمیشہ وہی رہے گی!
+تم پاس نہ ہوگے تو تمہاری جگہ خالی رہے گی،
+مگر یہاں کوئی دوسرا شخص نہیں آئے گا۔
+اور دل کا حال تو بس رب جانتا ہے۔
+تم سے کتنی پاکیزہ محبت ہے، یہ بس اللہ جانتا ہے۔
+`;
+
+function startUrduTyping2(){
+
+  let el = document.getElementById("urduText2");
+  if(!el) return;
+
+  el.innerHTML = "";
+  let i = 0;
+
+  function typing(){
+    if(i < urduParagraph2.length){
+      el.innerHTML += urduParagraph2.charAt(i);
+      i++;
+      setTimeout(typing,40);
+    }
+  }
+
+  typing();
+}
