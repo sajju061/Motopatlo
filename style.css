@@ -115,31 +115,6 @@ input{
   to{opacity:1;}
 }
 
-/* lock design */
-.lock-container{
-  text-align:center;
-  margin-top:100px;
-}
-
-.heart-lock{
-  font-size:80px;
-  position:relative;
-  animation: heartbeat 1s infinite;
-}
-
-.lock-text{
-  position:absolute;
-  top:40%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  font-size:20px;
-  color:white;
-  font-weight:bold;
-}
-
-@keyframes heartbeat{
-  from{ transform:scale(1);}
-  to{ transform:scale(1.2);}
 }
 
 /* cartoon des */
@@ -354,5 +329,49 @@ p{
     opacity:1;
     transform:translateY(0);
   }
+}
+
+/*lock pswrd */
+
+.lock-screen{
+  text-align:center;
+  padding-top:60px;
+  background:linear-gradient(#ffe6eb,#fff);
+  min-height:100vh;
+}
+
+.lock-title{
+  font-size:18px;
+  margin-bottom:20px;
+}
+
+.password-display{
+  font-size:28px;
+  letter-spacing:10px;
+  margin-bottom:30px;
+  min-height:40px;
+}
+
+.heart-keypad{
+  display:grid;
+  grid-template-columns:repeat(3,80px);
+  gap:15px;
+  justify-content:center;
+}
+
+.heart-keypad button{
+  width:80px;
+  height:80px;
+  background:#ff4d6d;
+  color:white;
+  font-size:20px;
+  border:none;
+  cursor:pointer;
+
+  clip-path: path("M40 70 C20 50 0 35 20 20 C35 10 40 25 40 25 C40 25 45 10 60 20 C80 35 60 50 40 70");
+}
+
+.heart-keypad button:active{
+  transform:scale(0.9);
 }
 

@@ -42,12 +42,35 @@ function goPage(pageNumber){
 
 
 // PASSWORD CHECK
-function checkPassword(){
-  let pass = document.getElementById("password").value;
-  if(pass === "1234"){
+let enteredPass = "";
+let correctPass = "1234"; // yahan apni nikah date likho
+
+function press(num){
+  if(enteredPass.length < 6){
+    enteredPass += num;
+    updateDisplay();
+  }
+}
+
+function clearPass(){
+  enteredPass = enteredPass.slice(0,-1);
+  updateDisplay();
+}
+
+function updateDisplay(){
+  document.getElementById("display").innerText =
+    "*".repeat(enteredPass.length);
+}
+
+function checkPass(){
+  if(enteredPass === correctPass){
+    enteredPass = "";
+    updateDisplay();
     goPage(2);
-  } else {
-    alert("Wrong Password ❌");
+  }else{
+    alert("Wrong Password ❤️");
+    enteredPass = "";
+    updateDisplay();
   }
 }
 
