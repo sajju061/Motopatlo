@@ -338,18 +338,18 @@ p{
 /*lock pswrd */
 
 .password-box {
-  width: 220px;
-  height: 55px;
+  width: 200px;
+  height: 50px;
   margin: 20px auto;
-  border: 3px solid #ff4d88;
-  border-radius: 20px;
-  background: #ffffff;
+  border: 3px solid #d81b60;
+  border-radius: 15px;
+  background: white;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 26px;
   letter-spacing: 8px;
-  overflow: hidden; /* important */
+  overflow: hidden;
 }
 
 
@@ -368,16 +368,16 @@ p{
 
 .keypad {
   display: grid;
-  grid-template-columns: repeat(3, 85px);
-  gap: 22px;   /* space between hearts */
+  grid-template-columns: repeat(3, 70px);
+  gap: 30px;   /* space between hearts */
   justify-content: center;
   margin-top: 40px;
 }
 
 .heart {
   position: relative;
-  width: 75px;   /* smaller */
-  height: 75px;
+  width: 40px;   /* smaller */
+  height: 40px;
   background: #e91e63; /* dark pink */
   border: none;
   cursor: pointer;
@@ -399,20 +399,20 @@ p{
 .heart::after {
   content: "";
   position: absolute;
-  width: 75px;
-  height: 75px;
+  width: 40px;
+  height: 40px;
   background: #e91e63; /* same dark pink */
   border-radius: 50%;
   z-index: -1;
 }
 
 .heart::before {
-  top: -37px;
+  top: -30px;
   left: 0;
 }
 
 .heart::after {
-  left: 37px;
+  left: 30px;
   top: 0;
 }
 
@@ -420,17 +420,5 @@ p{
 
 
 
-/* Floating + settle animation */
-@keyframes popIn {
-  0% {
-    transform: rotate(-45deg) translateY(-100px) scale(0);
-    opacity: 0;
-  }
-  60% {
-    transform: rotate(-45deg) translateY(10px) scale(1.1);
-  }
-  100% {
-    transform: rotate(-45deg) translateY(0) scale(1);
-    opacity: 1;
-  }
-}
+
+
