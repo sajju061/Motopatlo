@@ -20,6 +20,11 @@ function goPage(pageNumber){
   document.getElementById("typeText2").innerHTML = "";
   typeWriter2();
 }
+    if(pageNumber === 6){
+  k = 0;
+  document.getElementById("typeText3").innerHTM>
+  typeWriter3();
+}
 
     if(pageNumber === 3){
       startUrduTyping();
@@ -37,12 +42,7 @@ function goPage(pageNumber){
 
 }
 
-    if(pageNumber === 6){
-  k = 0;
-  document.getElementById("typeText3").innerHTML = "";
-  typeWriter3();
-}
- 
+
 
 
 
