@@ -117,6 +117,28 @@ document.addEventListener("DOMContentLoaded", function(){
 
 });
 
+// TYPEWRITER PAGE 2
+let text = "You Are My Forever Person ❤️";
+let i = 0;
+
+function startTyping(){
+
+  let el = document.getElementById("typeText1");
+  if(!el) return;
+
+  el.innerHTML = "";
+  i = 0;
+
+  function typing(){
+    if(i < text.length){
+      el.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typing,80);
+    }
+  }
+
+  typing();
+}
 
 
 
