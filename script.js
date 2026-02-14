@@ -15,6 +15,11 @@ function goPage(pageNumber){
 
   // Delay added so page visible ho jaye phir typing start ho
   setTimeout(()=>{
+    if(pageNumber === 2){
+  j = 0;
+  document.getElementById("typeText2").innerHTML = "";
+  typeWriter2();
+}
 
     if(pageNumber === 3){
       startUrduTyping();
@@ -32,7 +37,7 @@ function goPage(pageNumber){
 
 }
 
-
+    
 
 
 
@@ -120,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
-// TYPEWRITER
+// TYPEWRITER 
 let text = "You Are My Forever Person ❤️";
 let i = 0;
 
@@ -142,6 +147,19 @@ function startTyping(){
 
   typing();
 }
+
+//TYPEWRITER PAGE2
+const romanticMessage2 = "You are my favorite place to escape ❤️";
+let j = 0;
+
+function typeWriter2() {
+  if (j < romanticMessage2.length) {
+    document.getElementById("typeText2").innerHTML += romanticMessage2.charAt(j);
+    j++;
+    setTimeout(typeWriter2, 50);
+  }
+}
+
 
 
 
