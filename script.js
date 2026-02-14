@@ -6,23 +6,30 @@ function goPage(pageNumber){
     page.classList.remove("active");
   });
 
-  document.getElementById("page"+pageNumber).classList.add("active");
+  let currentPage = document.getElementById("page"+pageNumber);
+  if(currentPage){
+    currentPage.classList.add("active");
+  }
 
   window.scrollTo(0,0);
 
-  // PAGE 3 URDU TYPEWRITER
-  if(pageNumber === 3){
-    startUrduTyping();
-  }
+  // Delay added so page visible ho jaye phir typing start ho
+  setTimeout(()=>{
 
-  // PAGE 4 TYPEWRITER
-  if(pageNumber === 4){
-    startTyping();
-  }
-}
-  // PAGE 4 TYPEWRITER
-  if(pageNumber === 5){
-  startUrduTyping2();
+    if(pageNumber === 3){
+      startUrduTyping();
+    }
+
+    if(pageNumber === 4){
+      startTyping();
+    }
+
+    if(pageNumber === 5){
+      startUrduTyping2();
+    }
+
+  },100);
+
 }
 
 
@@ -45,6 +52,9 @@ function checkPassword(){
 }
 
 
+
+
+
 // MUSIC
 let music = document.getElementById("bgm");
 let playBtn = document.getElementById("playBtn");
@@ -52,6 +62,8 @@ let playBtn = document.getElementById("playBtn");
 playBtn.onclick = ()=>{
   music.play();
 };
+
+
 
 
 // HEARTS FLOATING
@@ -75,7 +87,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
 });
 
-// ===== PAGE 3 URDU TYPEWRITER ====
+
+
+
 // TYPEWRITER
 let text = "You Are My Forever Person ❤️";
 let i = 0;
@@ -99,7 +113,10 @@ function startTyping(){
   typing();
 }
 
-// ===== PAGE 4 URDU TYPEWRITER ====
+
+
+
+// ===== PAGE 3 URDU TYPEWRITER ====
 //URDU TYPEWRITER
 
 let urduParagraph = `
@@ -127,14 +144,17 @@ function startUrduTyping(){
 
   function typing(){
     if(i < urduParagraph.length){
-      el.innerHTML += urduParagraph.charAt(i);
+      el.innerHTML += urduParagraph[i];
       i++;
-      setTimeout(typing,40);
+      setTimeout(typing,35);
     }
   }
 
   typing();
 }
+
+
+
 
 
 
@@ -168,9 +188,9 @@ function startUrduTyping2(){
 
   function typing(){
     if(i < urduParagraph2.length){
-      el.innerHTML += urduParagraph2.charAt(i);
+      el.innerHTML += urduParagraph2[i];
       i++;
-      setTimeout(typing,40);
+      setTimeout(typing,35);
     }
   }
 
