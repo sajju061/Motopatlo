@@ -1,5 +1,5 @@
 body{
-  margin:0;
+  overflow:hidden;
   background: #ffeaf4;
   text-align: center;
   font-family: serif;
@@ -336,54 +336,86 @@ p{
 
 /*lock pswrd */
 
-
-.keypad {
-  display: grid;
-  grid-template-columns: repeat(3, 90px);
-  gap: 25px;
-  justify-content: center;
-  margin-top: 40px;
-}
-
-.heart {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  background: #ffb6c1;
-  border: none;
-  cursor: pointer;
-  transform: rotate(-45deg);
+.password-box {
+  width: 200px;
+  height: 50px;
+  margin: 30px auto;
+  border: 2px solid #ff8fab;
+  border-radius: 15px;
+  background: white;
+  font-size: 28px;
+  letter-spacing: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* Keypad Grid */
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 75px);
+  gap: 18px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Heart Button */
+.heart {
+  position: relative;
+  width: 65px;
+  height: 65px;
+  background: #ffb6c1;
+  border: none;
+  cursor: pointer;
+  transform: rotate(-45deg) scale(0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: popIn 0.6s forwards;
+}
+
+/* Number inside heart */
 .heart span {
   transform: rotate(45deg);
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
   color: #d63384;
   pointer-events: none;
 }
 
-/* Heart circles */
+/* Heart shape circles */
 .heart::before,
 .heart::after {
   content: "";
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: 65px;
+  height: 65px;
   background: #ffb6c1;
   border-radius: 50%;
   z-index: -1;
 }
 
 .heart::before {
-  top: -40px;
+  top: -32px;
   left: 0;
 }
 
 .heart::after {
-  left: 40px;
+  left: 32px;
   top: 0;
+}
+
+/* Floating + settle animation */
+@keyframes popIn {
+  0% {
+    transform: rotate(-45deg) translateY(-100px) scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: rotate(-45deg) translateY(10px) scale(1.1);
+  }
+  100% {
+    transform: rotate(-45deg) translateY(0) scale(1);
+    opacity: 1;
+  }
 }
