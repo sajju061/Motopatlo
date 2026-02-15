@@ -13,21 +13,13 @@ function goPage(pageNumber){
 
   window.scrollTo(0,0);
 
-  // Delay added so page visible ho jaye phir typing start ho
   setTimeout(()=>{
+
     if(pageNumber === 2){
-  j = 0;
-  document.getElementById("typeText2").innerHTML = "";
-  typeWriter2();
-}
-    if(pageNumber === 6){
-  k = 0;
-  document.getElementById("typeText3").innerHTM>
-  typeWriter3();
-}
-    if(pageNumber === 7){
-  startUrduTyping3();
-}
+      j = 0;
+      document.getElementById("typeText2").innerHTML = "";
+      typeWriter2();
+    }
 
     if(pageNumber === 3){
       startUrduTyping();
@@ -41,10 +33,19 @@ function goPage(pageNumber){
       startUrduTyping2();
     }
 
+    if(pageNumber === 6){
+      k = 0;
+      document.getElementById("typeText3").innerHTML = "";
+      typeWriter3();
+    }
+
+    if(pageNumber === 7){
+      startUrduTyping3();
+    }
+
   },100);
 
 }
-
 
 
 
@@ -272,17 +273,16 @@ function typeWriter3() {
 
 
 // ===== PAGE 7 URDU TYPEWRITER =====
-
 let urduParagraph3 = `
-میری خواہش ہے میں تمہاری زندگی میں وہ انسان بنوں اگر تمہیں کوئی بھی خوشی ملے تو آکر مجھے بتاؤ تمہیں کوئی پرشانی  دکھ ہو تو مجھ سے بانٹو میری دعاوں پہ تمہیں یقین ہو
+میری خواہش ہے میں تمہاری زندگی میں وہ انسان بنوں کہ اگر تمہیں کوئی بھی خوشی ملے تو آکر مجھے بتاؤ تمہیں کوئی پریشانی ، دکھ ہو تو مجھ سے بانٹو میری دعاوں پہ تمہیں یقین ہو
 
-تمہیں یقین ہو اس دنیا میں میں کوئی  ایسا ہے جسکی سانسیں میرے ہونے سے ہیں اگر دنیا میرا ساتھ کبھی چھوڑ بھی دے تو وہ میرے ساتھ ہے
+تمہیں یقین ہو اس دنیا میں کوئی  ایسا ہے جسکی سانسیں میرے ہونے سے ہیں اگر دنیا میرا ساتھ کبھی چھوڑ بھی دے تو وہ میرے ساتھ ہے
 
-تم دنیا کے سامنے تو مضبوط رہو لیکن میرے کندھے پہ سر رکھ کے اپنے آنسو بہا دو اور ہر دکھ  غم بھول جاؤ اور تمہیں یقین ہو  یہ میری آواز ساری زندگی کے لیے سن سکتا ہے
+تم دنیا کے سامنے تو مضبوط رہو لیکن میرے کندھے پہ سر رکھ کے اپنے آنسو بہا دو اور ہر دکھ ، غم بھول جاؤ اور تمہیں  یقین ہو ، یہ میری آواز ساری زندگی کے لیے سن سکتا ہے
 
-میں فقط اتنا چاہتا ہوں
-
+میں فقط اتنا چاہتا ہوں  
 `;
+
 
 function startUrduTyping3(){
 
