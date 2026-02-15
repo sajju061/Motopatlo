@@ -43,6 +43,10 @@ function goPage(pageNumber){
       startUrduTyping3();
     }
 
+    if(pageNumber === 8){
+      startTyping();
+    }
+
   },100);
 
 }
@@ -134,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
-// TYPEWRITER 
+// TYPEWRITER page 4
 let text = "You Are My Forever Person ❤️";
 let i = 0;
 
@@ -168,6 +172,34 @@ function typeWriter2() {
     setTimeout(typeWriter2, 50);
   }
 }
+
+
+
+//typewriter page 8
+
+let text = "A hug like this and we both forget everything ";
+let s = 0;
+
+function startTyping4(){
+
+  let el = document.getElementById("typeText4");
+  if(!el) return;
+
+  el.innerHTML = "";
+  s = 0;
+
+  function typing(){
+    if(s < text.length){
+      el.innerHTML += text.charAt(s);
+      s++;
+      setTimeout(typing,80);
+    }
+  }
+
+  typing();
+}
+
+
 
 
 
@@ -302,3 +334,5 @@ function startUrduTyping3(){
 
   typing();
 }
+
+
