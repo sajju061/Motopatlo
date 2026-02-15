@@ -25,6 +25,9 @@ function goPage(pageNumber){
   document.getElementById("typeText3").innerHTM>
   typeWriter3();
 }
+    if(pageNumber === 7){
+  startUrduTyping3();
+}
 
     if(pageNumber === 3){
       startUrduTyping();
@@ -267,3 +270,35 @@ function typeWriter3() {
 
 
 
+
+// ===== PAGE 7 URDU TYPEWRITER =====
+
+let urduParagraph3 = `
+میری خواہش ہے میں تمہاری زندگی میں وہ انسان بنوں اگر تمہیں کوئی بھی خوشی ملے تو آکر مجھے بتاؤ تمہیں کوئی پرشانی ، دکھ ہو تو مجھ سے بانٹو میری دعاوں پہ تمہیں یقین ہو
+
+تمہیں یقین ہو اس دنیا میں میں کوئی  ایسا ہے جسکی سانسیں میرے ہونے سے ہیں اگر دنیا میرا ساتھ کبھی چھوڑ بھی دے تو وہ میرے ساتھ ہے
+
+تم دنیا کے سامنے تو مضبوط رہو لیکن میرے کندھے پہ سر رکھ کے اپنے آنسو بہا دو اور ہر دکھ ، غم بھول جاؤ اور تمہیں یقین ہو ، یہ میری آواز ساری زندگی کے لیے سن سکتا ہے
+
+میں فقط اتنا چاہتا ہوں
+
+`;
+
+function startUrduTyping3(){
+
+  let el = document.getElementById("urduText3");
+  if(!el) return;
+
+  el.innerHTML = "";
+  let i = 0;
+
+  function typing(){
+    if(i < urduParagraph3.length){
+      el.innerHTML += urduParagraph3[i];
+      i++;
+      setTimeout(typing,35);
+    }
+  }
+
+  typing();
+}
