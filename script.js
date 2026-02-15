@@ -21,7 +21,8 @@ function goPage(pageNumber){
   typeWriter2();
 }
     if(pageNumber === 7){
-      startUrduTyping3(
+      startUrduTyping3();
+    }
 
     if(pageNumber === 6){
   k = 0;
