@@ -20,6 +20,12 @@ function goPage(pageNumber){
   document.getElementById("typeText2").innerHTML = "";
   typeWriter2();
 }
+    if(pageNumber === 7){
+  y = 0;
+  document.getElementById("urduText3").innerHTML = "";
+  typeUrdu3();
+}
+
     if(pageNumber === 6){
   k = 0;
   document.getElementById("typeText3").innerHTM>
