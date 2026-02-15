@@ -7,6 +7,7 @@ body{
 }
 
 /* pages */
+/*
 .page{
   display:none;
   min-height:100vh;
@@ -21,7 +22,6 @@ body{
 }
 
 
-/* paper box */
 .paper{
   display: block;
   background: #fffdf5;
@@ -30,7 +30,6 @@ body{
   border-radius: 8px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 
-  /* Paper Look */
   background-image: linear-gradient(#f9f3dc 1px, transparent 1px);
   background-size: 100% 30px;
 
@@ -41,7 +40,6 @@ body{
   animation: openPaper 1s ease;
 }
 
-/* Opening Animation */
 @keyframes openPaper{
   from{
     transform: scaleY(0);
@@ -52,7 +50,7 @@ body{
     opacity:1;
   }
 }
-
+*/
 
 
 
