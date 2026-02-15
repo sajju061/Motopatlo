@@ -44,8 +44,12 @@ function goPage(pageNumber){
     }
 
     if(pageNumber === 8){
-      startTyping();
-    }
+  m = 0;
+  document.getElementById("typeText4").innerHTML = "";
+  typeWriter4();
+}
+
+
 
   },100);
 
@@ -172,33 +176,6 @@ function typeWriter2() {
     setTimeout(typeWriter2, 50);
   }
 }
-
-
-
-//typewriter page 8
-
-let text = "A hug like this and we both forget everything ";
-let s = 0;
-
-function startTyping4(){
-
-  let el = document.getElementById("typeText4");
-  if(!el) return;
-
-  el.innerHTML = "";
-  s = 0;
-
-  function typing(){
-    if(s < text.length){
-      el.innerHTML += text.charAt(s);
-      s++;
-      setTimeout(typing,80);
-    }
-  }
-
-  typing();
-}
-
 
 
 
@@ -335,4 +312,18 @@ function startUrduTyping3(){
   typing();
 }
 
+
+//page 8 typewriter
+
+// ===== PAGE 8 TYPEWRITER =====
+const romanticMessage4 = "A hug like this and we both forget everything ❤️";
+let m = 0;
+
+function typeWriter4() {
+  if (m < romanticMessage4.length) {
+    document.getElementById("typeText4").innerHTML += romanticMessage4.charAt(m);
+    m++;
+    setTimeout(typeWriter4, 60);
+  }
+}
 
