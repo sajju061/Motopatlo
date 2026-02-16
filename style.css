@@ -261,6 +261,19 @@ p{
   min-height:200px;
 }
 
+.eng-type{
+  text-align: justify;
+  text-align-last: center;
+  direction: ltr;          /* force left to right */
+  white-space: pre-line;
+  line-height: 1.8;
+  font-size: 18px;
+  padding: 0 15px;
+  
+}
+
+
+
 
 /*STYLE LOVE LETTER */
 
