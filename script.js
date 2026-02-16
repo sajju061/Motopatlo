@@ -52,7 +52,13 @@ function goPage(pageNumber){
     if(pageNumber === 9){
       startEnglishTyping();
     }
-
+    
+    if(pageNumber === 10){
+  launchConfetti();
+  setTimeout(()=>{
+    alert("I will always choose you ❤️");
+  },1200);
+}
 
 
 
@@ -358,3 +364,20 @@ function startEnglishTyping(){
   typing();
 }
 
+
+
+
+function launchConfetti(){
+  for(let i=0; i<40; i++){
+    let conf = document.createElement("div");
+    conf.innerHTML = "❤️";
+    conf.style.position = "fixed";
+    conf.style.left = Math.random()*100 + "vw";
+    conf.style.top = "-20px";
+    conf.style.fontSize = (15 + Math.random()*20) + "px";
+    conf.style.animation = "fall 3s linear forwards";
+    document.body.appendChild(conf);
+
+    setTimeout(()=>{ conf.remove(); },3000);
+  }
+}

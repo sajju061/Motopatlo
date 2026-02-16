@@ -410,3 +410,67 @@ p{
 
 
 
+/* FINAL PAGE CONTAINER */
+.final-container{
+  text-align: center;
+  padding: 40px 20px;
+  animation: fadeIn 1.5s ease;
+}
+
+/* HEARTBEAT IMAGE */
+.final-image img{
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #ff4f7a;
+  box-shadow: 0 0 25px rgba(255,79,122,0.6);
+  animation: heartbeat 1.5s infinite;
+  margin-bottom: 25px;
+}
+
+/* HEARTBEAT ANIMATION */
+@keyframes heartbeat{
+  0%{ transform: scale(1); }
+  25%{ transform: scale(1.05); }
+  40%{ transform: scale(1); }
+  60%{ transform: scale(1.05); }
+  100%{ transform: scale(1); }
+}
+
+/* MESSAGE STYLE */
+.final-message{
+  opacity: 0;
+  animation: fadeText 2s ease forwards;
+  animation-delay: 1s;
+}
+
+.final-message h2{
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.final-message p{
+  font-size: 18px;
+  line-height: 1.8;
+  padding: 0 15px;
+}
+
+/* FADE EFFECT */
+@keyframes fadeIn{
+  from{ opacity: 0; }
+  to{ opacity: 1; }
+}
+
+@keyframes fadeText{
+  to{ opacity: 1; }
+}
+
+@keyframes fall{
+  to{
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+
