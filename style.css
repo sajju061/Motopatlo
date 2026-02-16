@@ -266,7 +266,7 @@ p{
   text-align-last: center;
   direction: ltr;          /* force left to right */
   line-height: 1.0;
-  font-size: 8px;
+  font-size: 12px;
   padding: 0 10px;
   word-spacing: 1.5px;
   
@@ -343,14 +343,6 @@ p{
 
 
 
-/* Keypad Grid */
-.keypad {
-  display: grid;
-  grid-template-columns: repeat(3, 75px);
-  gap: 18px;
-  justify-content: center;
-  margin-top: 30px;
-}
 
 /* Heart Button */
 
