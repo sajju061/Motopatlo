@@ -98,7 +98,7 @@ function updateDisplay() {
   let display = document.getElementById("display");
 
   if (isHidden) {
-    display.innerText = "●".repeat(password.length);
+    display.innerText = "*".repeat(password.length);
   } else {
     display.innerText = password;
   }
