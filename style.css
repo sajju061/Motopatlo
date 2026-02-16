@@ -265,10 +265,10 @@ p{
   text-align: justify;
   text-align-last: center;
   direction: ltr;          /* force left to right */
-  white-space: pre-line;
-  line-height: 1.8;
-  font-size: 18px;
-  padding: 0 15px;
+  line-height: 1.0;
+  font-size: 8px;
+  padding: 0 10px;
+  word-spacing: 1.5px;
   
 }
 
