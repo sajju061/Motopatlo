@@ -71,10 +71,10 @@ function goPage(pageNumber){
 // PASSWORD CHECK
 let isHidden = true;
 let password = "";
-let correctPassword = "14012026"; // yahan apni Nikah date likho
+let correctPassword = "14"; // yahan apni Nikah date likho
 
 function addNumber(num) {
-  if (password.length < 12) {
+  if (password.length < 6) {
     password += num;
     updateDisplay();
   }
