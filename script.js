@@ -373,7 +373,7 @@ function startEnglishTyping(){
 
   function typing(){
     if(i < englishParagraph.length){
-      el.innerHTML += englishParagraph4[i];
+      el.innerHTML += englishParagraph[i];
       i++;
       setTimeout(typing,40);
     }
